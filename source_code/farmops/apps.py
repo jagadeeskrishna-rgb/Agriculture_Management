@@ -1,6 +1,0 @@
-from django.apps import AppConfig
-
-class FarmopsConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = "farmops"
-    verbose_name = "Agriculture Operations"
