@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="h3">Delete Record</h1>
+<p>Are you sure you want to delete <strong>{{ object }}</strong>?</p>
+<form method="post">{% csrf_token %}<button class="btn btn-danger">Delete</button> <a class="btn btn-outline-secondary" href="javascript:history.back()">Cancel</a></form>
+{% endblock %}

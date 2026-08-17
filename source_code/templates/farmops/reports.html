@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="h3 mb-4">Reports</h1>
+<div class="row g-4">
+  <div class="col-lg-4"><h2 class="h5">Expense by Category</h2><table class="table"><tbody>{% for row in expense_by_category %}<tr><td>{{ row.expense_category }}</td><td>{{ row.total }}</td></tr>{% empty %}<tr><td>No expense data.</td></tr>{% endfor %}</tbody></table></div>
+  <div class="col-lg-4"><h2 class="h5">Harvest by Crop</h2><table class="table"><tbody>{% for row in harvest_by_crop %}<tr><td>{{ row.crop__crop_name }}</td><td>{{ row.quantity }} / {{ row.income }}</td></tr>{% empty %}<tr><td>No harvest data.</td></tr>{% endfor %}</tbody></table></div>
+  <div class="col-lg-4">
+    <h2 class="h5">Crop Status</h2>
+    <p class="text-muted small">
+      Crop status shows how many crops are currently in each lifecycle stage,
+      such as planned, sown, growing, ready for harvest, harvested, or cancelled.
+      This helps farmers quickly understand crop progress and identify work that
+      still needs attention.
+    </p>
+    <table class="table">
+      <thead><tr><th>Status</th><th>Total Crops</th></tr></thead>
+      <tbody>
+        {% for row in crop_status %}
+          <tr><td>{{ row.crop_status|title }}</td><td>{{ row.total }}</td></tr>
+        {% empty %}
+          <tr><td colspan="2">No crop data.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

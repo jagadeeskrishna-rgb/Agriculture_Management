@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div><h1 class="h2">Farm Dashboard</h1><p class="text-muted mb-0">Track cultivation records, costs, harvests, and income.</p></div>
+  <a class="btn btn-success" href="{% url 'farm-add' %}">Add Farm</a>
+</div>
+<div class="row g-3 mb-4">
+  <div class="col-md-2"><div class="metric"><span>Farms</span><strong>{{ farm_count }}</strong></div></div>
+  <div class="col-md-2"><div class="metric"><span>Crops</span><strong>{{ crop_count }}</strong></div></div>
+  <div class="col-md-2"><div class="metric"><span>Activities</span><strong>{{ activity_count }}</strong></div></div>
+  <div class="col-md-2"><div class="metric"><span>Expenses</span><strong>{{ expense_total }}</strong></div></div>
+  <div class="col-md-2"><div class="metric"><span>Income</span><strong>{{ income_total }}</strong></div></div>
+  <div class="col-md-2"><div class="metric"><span>Profit/Loss</span><strong>{{ profit_total }}</strong></div></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <h2 class="h5">Recent Crops</h2>
+    <div class="table-responsive"><table class="table table-hover"><thead><tr><th>Crop</th><th>Farm</th><th>Season</th><th>Status</th></tr></thead><tbody>
+      {% for crop in recent_crops %}<tr><td>{{ crop.crop_name }}</td><td>{{ crop.farm }}</td><td>{{ crop.get_season_display }}</td><td><span class="badge text-bg-success">{{ crop.get_crop_status_display }}</span></td></tr>{% empty %}<tr><td colspan="4">No crops recorded yet.</td></tr>{% endfor %}
+    </tbody></table></div>
+  </div>
+  <div class="col-lg-5">
+    <h2 class="h5">Recent Harvests</h2>
+    <div class="list-group">
+      {% for harvest in recent_harvests %}<a class="list-group-item list-group-item-action" href="{{ harvest.get_absolute_url }}">{{ harvest.crop.crop_name }} - {{ harvest.harvested_quantity }} {{ harvest.unit_of_measurement }}</a>{% empty %}<div class="list-group-item">No harvest records yet.</div>{% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
