@@ -4,6 +4,16 @@
 
 Agriculture Process Management System
 
+## Abstract
+
+The Agriculture Process Management System is a web-based application designed to support farmers in managing their day-to-day agricultural activities in a systematic and digital manner. Agriculture is an important sector, but many small and medium-scale farmers still depend on manual records, paper notebooks, and memory-based tracking to manage farm operations. This creates several difficulties, such as loss of records, inaccurate expense calculation, poor crop lifecycle tracking, and lack of proper reports for decision-making.
+
+The proposed system provides a centralized platform where farmers can manage farm details, crop information, farming activities, expenses, harvest records, and reports. By using this system, farmers can easily store and access important data related to land, soil, irrigation, crop variety, sowing dates, activity status, cultivation expenses, yield, storage, and selling details. This helps reduce manual errors and improves the overall efficiency of farm management.
+
+The system is developed as a Python Django web application, which provides secure user access, structured database management, and easy interaction through web pages. The system also demonstrates software development life cycle practices using tools such as GitHub for version control, Jira for task tracking, Confluence for documentation, and Jenkins for automation and continuous integration.
+
+The main objective of this project is to digitize agricultural process management and help farmers make better decisions based on accurate records and reports. The system improves transparency in farm operations, supports financial planning, tracks productivity, and helps farmers compare performance across different crops, seasons, and farms.
+
 ## Problem Statement
 
 Agriculture is one of the most important sectors of the economy, but many small and medium-scale farmers still manage their farm activities through manual methods such as notebooks, paper records, and memory-based tracking. This makes it difficult to maintain accurate information about farms, crops, daily activities, expenses, harvests, and income.
@@ -35,15 +45,7 @@ Through this system, farmers can easily add, view, update, and delete records wh
 
 The project also follows proper software development practices by using tools such as GitHub for version control, Jira for task management, Confluence for documentation, and Jenkins for automation. Overall, the proposed system reduces manual work, improves data accuracy, prevents record loss, and supports better farm planning and management.
 
-## Elaborated Abstract
 
-The Agriculture Process Management System is a web-based application designed to support farmers in managing their day-to-day agricultural activities in a systematic and digital manner. Agriculture is an important sector, but many small and medium-scale farmers still depend on manual records, paper notebooks, and memory-based tracking to manage farm operations. This creates several difficulties, such as loss of records, inaccurate expense calculation, poor crop lifecycle tracking, and lack of proper reports for decision-making.
-
-The proposed system provides a centralized platform where farmers can manage farm details, crop information, farming activities, expenses, harvest records, and reports. By using this system, farmers can easily store and access important data related to land, soil, irrigation, crop variety, sowing dates, activity status, cultivation expenses, yield, storage, and selling details. This helps reduce manual errors and improves the overall efficiency of farm management.
-
-The system is developed as a Python Django web application, which provides secure user access, structured database management, and easy interaction through web pages. The system also demonstrates software development life cycle practices using tools such as GitHub for version control, Jira for task tracking, Confluence for documentation, and Jenkins for automation and continuous integration.
-
-The main objective of this project is to digitize agricultural process management and help farmers make better decisions based on accurate records and reports. The system improves transparency in farm operations, supports financial planning, tracks productivity, and helps farmers compare performance across different crops, seasons, and farms.
 
 ## Project Modules
 
